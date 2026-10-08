@@ -36,6 +36,36 @@ main {
 }
 
 header { margin-bottom: 32px; }
+
+/* Studio logo: Silly (pixel-art SVG) beside the wordmark in Block Rocket's pixel font */
+@font-face {
+  font-family: "Pixelify Sans";
+  src: url("fonts/PixelifySans.ttf") format("truetype");
+  font-display: swap;
+}
+.logo { display: flex; align-items: center; gap: 18px; margin-bottom: 16px; }
+.logo-dog { flex: none; width: 183px; height: auto; image-rendering: pixelated; }
+.wordmark {
+  font-family: "Pixelify Sans", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+.wordmark span { color: var(--accent); }
+.studio {
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: 6px;
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+@media (max-width: 560px) {
+  .logo { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .logo-dog { width: 122px; }
+  .wordmark { font-size: 32px; }
+}
 header .studio { color: var(--muted); font-size: 15px; margin: 0 0 4px; }
 h1 { font-size: 32px; line-height: 1.2; margin: 0 0 8px; }
 h2 { font-size: 21px; margin: 36px 0 8px; }
